@@ -21,7 +21,7 @@ export default class App extends Component {
   performSearch = (query = 'cats') => {
     // FETCH OPTION
 
-    // fetch('http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC')
+    // fetch('https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC')
     // .then(response => response.json())
     // .then(responseData => {
     //   this.setState({gifs: responseData.data});
@@ -31,7 +31,7 @@ export default class App extends Component {
     // });
 
     // AXIOS OPTION
-    axios.get(`http://api.giphy.com/v1/gifs/search?q=${query}&limit=24&api_key=dc6zaTOxFJmzC`)
+    axios.get(`https://api.giphy.com/v1/gifs/search?q=${query}&limit=24&api_key=dc6zaTOxFJmzC`)
     .then(response => {
       this.setState({
         gifs: response.data.data,
